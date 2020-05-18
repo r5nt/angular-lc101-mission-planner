@@ -1,0 +1,19 @@
+.container {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(233, 238, 248);
+  color: rgb(0, 0, 0);
+}
+
+.box {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    border: 3px dashed rgb(92, 0, 95);
+}
+
