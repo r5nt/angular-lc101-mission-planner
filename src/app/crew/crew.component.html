@@ -1,3 +1,6 @@
+<input #name type="text" />
+<label>First mission<input #firstMission type="checkbox" /></label>
+<button (click)="add(name.value, firstMission.checked)">Add</button>
 <h3>Crew</h3>
 <ul>
   <li *ngFor="let member of crew">
@@ -19,6 +22,3 @@
 
   </li>
 </ul>
-<input #name type="text" />
-<label>First mission<input #firstMission type="checkbox" /></label>
-<button (click)="add(name.value, firstMission.checked)">Add</button>

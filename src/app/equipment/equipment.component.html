@@ -1,7 +1,19 @@
+<input #equipmentName type="text" />
+<button (click)="add(equipmentName.value)">Add</button>
 <h3>Equipment</h3>
 <ul>
-  <li>Habitat dome</li>
-  <li>Drones</li>
-  <li>Food containers</li>
-  <li>Oxygen tanks</li>
+  <li *ngFor="let piece of equipment">
+
+    <span *ngIf="pieceBeingEdited !== piece; else elseBlock">
+      <span (click)="edit(piece)" class="editable-text">{{ piece }}</span>
+      <button (click)="remove(piece)">remove</button>
+    </span>
+
+    <ng-template #elseBlock>
+      <!-- edit state of member -->
+      <input #updatedPiece type="text" (keyup.enter)="save(updatedPiece.value, piece);" value="{{piece}}" />
+      <button (click)="save(updatedPiece.value, piece)">save</button>
+    </ng-template>
+
+  </li>
 </ul>
