@@ -33,8 +33,4 @@ export class CrewComponent implements OnInit {
       this.crew.splice(this.crew.indexOf(candidate), 1);
     }
   }
-
-  logIt(whatever: object): void {
-    console.log(whatever);
-  }
 }
